@@ -1,0 +1,23 @@
+<section class="cf bg-black white w-100 ph3 ph5-sm ph6-m">
+  <div class="grid">
+    <div class="cf dt mw9 center w-100 pv5 opacity-60">
+      <div class="fl w-50 pa3-sm pa2 logo--small"> 
+        <a href="/" class="pv3 dib logo">
+          <img src='/assets/logo.png' />
+        </a>
+        <p class="font_mini p-t20 currentcolor">© 2018 {{ site.title }} Ltd.</p>
+      </div>
+      <div class="fl w-50 pa3-sm pa2">
+        <h3 class="font-nitti tracked currentcolor ttu fw-600 font_mini pt0">Company</h3>
+        <ul class="pt3 font_small lighten-links">
+        {% for item in site.data.menu %}
+        {% unless forloop.first %}
+          <li {% unless forloop.index == 2 %} class="pt2" {% endunless %}><a href="/{{ item | downcase | slugify }}/">{{ item }}</a></li>
+        {% endunless %}
+        {% endfor %}
+          <li class="pt2"><a href="{{ site.twitter }}" target = "_blank" rel = 'noopener'>Twitter</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

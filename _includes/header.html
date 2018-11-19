@@ -1,0 +1,22 @@
+<header class="w-100 bg-black c-white">
+  <a href="https://medium.com/@chaininc/chain-and-stellar-are-joining-forces-ecd44fb4c474" target="_blank"></a>
+  <div class="pt3 ph3 ph5-sm ph6-m">
+    <div class="dt mw9 center w-100 navbar">
+      <a href="/" class="pv3 dib logo">
+        <img src='/assets/logo.png'/>
+        <!-- YorkMetrics -->
+      </a>
+      <div class="nav-trigger">
+        <input type="checkbox" id="mobile-menu" />
+        <label class="nav-trigger__icon nav-trigger__icon" for="mobile-menu"><span></span></label>
+      </div>
+      <ul class="nav color-links">
+      {% for item in site.data.menu %}
+      {% unless forloop.last %}
+        <li class="nav__item"><a href="/{% unless forloop.first %}{{ item | downcase | slugify }}/{% endunless %}" class="fw-500 font_small"><span>{{ item }}</span></a></li>
+      {% endunless %}
+      {% endfor %}
+      </ul>
+    </div>
+  </div>
+</header>
