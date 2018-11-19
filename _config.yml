@@ -18,6 +18,9 @@ twitter: https://twitter.com/yorkmetrics
 include:
   - _pages
 
+# Set up a form carry account to enable form submissions
+formcarry: #Sy0IeGyAz
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
