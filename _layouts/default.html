@@ -10,19 +10,17 @@
       <div class="dtc v-mid">
         <div class="mw9 center w-100">
           <h1 class="fw-600 f-headline lh-blink f-headline-m white pt4 pt0-m">
-            {%- if page.permalink == '/' -%}
-            <span class="db dib-m pr3">{{ page.headline.first-part }} </span>
+            {% if page.permalink == '/' %}
+            <span class="db dib-m">{{ page.headline.first-part }} </span>
             <div class="relative dib">
-              <span class="c-aqua font-nitti tracked-terminal typewrite lh-solid dib-m" data-period="2000" data-type='{{ page.blink_words | jsonify }}'>
-                <div class="wrap dib"></div> 
-              </span>
-              <div class="cursor"></div>
-            </div>
-            <span class="db">{{ page.headline.last-part }}</span>
+               <span class="c-aqua font-nitti tracked-terminal typewrite lh-solid dib-m" data-period="2000" data-type='{{ page.blink_words | jsonify }}'>
+                 <div class="wrap dib"></div>
+                 </span><div class="cursor"></div></div> <span class="db">{{ page.headline.last-part }}</span>
             {%- else -%}
               {{ page.headline }}
-            {%- endif -%}
+            {%- endif -%}      
           </h1>
+          
           <div class="cf pb4">
             <p class="f4 f3-sm c-white pb5 pt3 pt0-sm measure">{{ page.description }}</p>
             {% if page.button %}
@@ -40,6 +38,12 @@
   </section>
   {% include footer.html %}
   <script src="/assets/main.js"></script>
+  {% if page.permalink == '/contact-us/' %}
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" 
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src = '/assets/autoresize.js'></script>
+  <script src = '/assets/form.js'></script>
+  {% endif %}
   {%- include analytics.html -%}
   {% if page.permalink == '/' %} {%- include helpcrunch.html -%} {% endif %}
 </body>
