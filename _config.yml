@@ -19,7 +19,8 @@ include:
   - _pages
 
 # Set up a form carry account to enable form submissions
-formcarry: #Sy0IeGyAz
+# https://formcarry.com/s/KSLzPMb1NiJ
+formcarry: KSLzPMb1NiJ
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
